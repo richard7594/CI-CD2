@@ -23,7 +23,7 @@ jobs:
         uses: appleboy/ssh-action@v1.1.0
         with:
           host: 192.168.1.91
-          username: kali
+          username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             mkdir -p /home/${{ secrets.SERVER_USER }}/apps

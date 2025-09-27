@@ -22,9 +22,10 @@ jobs:
       - name: Déploiement sur la VM
         uses: appleboy/ssh-action@v1.1.0
         with:
-          host: ${{ secrets.SERVER_HOST }}
+          host: 127.0.0.1
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          port: 2222
           script: |
             mkdir -p /home/${{ secrets.SERVER_USER }}/apps
             cd /home/${{ secrets.SERVER_USER }}/apps

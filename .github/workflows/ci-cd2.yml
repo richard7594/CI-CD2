@@ -22,15 +22,15 @@ jobs:
       - name: Déploiement sur la VM
         uses: appleboy/ssh-action@v1.1.0
         with:
-          host: 127.0.0.1
+          host: 192.168.1.91
           username: kali
           key: -----BEGIN OPENSSH PRIVATE KEY-----
-                b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-                QyNTUxOQAAACB9xQPAV3z6Jq77DfmOpF60XHwkDPxPyVjc0LCbBCSorAAAAJjfyFpN38ha
-                TQAAAAtzc2gtZWQyNTUxOQAAACB9xQPAV3z6Jq77DfmOpF60XHwkDPxPyVjc0LCbBCSorA
-                AAAEB9UDQ/hanma9BEQXhEeolJFo+Ld16dGMY050VeTLyPGX3FA8BXfPomrvsN+Y6kXrRc
-                fCQM/E/JWNzQsJsEJKisAAAAFWdpdGh1Yi1hY3Rpb25zLWRlcGxveQ==
-                -----END OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACB9xQPAV3z6Jq77DfmOpF60XHwkDPxPyVjc0LCbBCSorAAAAJjfyFpN38ha
+TQAAAAtzc2gtZWQyNTUxOQAAACB9xQPAV3z6Jq77DfmOpF60XHwkDPxPyVjc0LCbBCSorA
+AAAEB9UDQ/hanma9BEQXhEeolJFo+Ld16dGMY050VeTLyPGX3FA8BXfPomrvsN+Y6kXrRc
+fCQM/E/JWNzQsJsEJKisAAAAFWdpdGh1Yi1hY3Rpb25zLWRlcGxveQ==
+-----END OPENSSH PRIVATE KEY-----
           port: 2222
           script: |
             mkdir -p /home/${{ secrets.SERVER_USER }}/apps
